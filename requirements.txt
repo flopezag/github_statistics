@@ -1,0 +1,2 @@
+#python3.12 project
+requests==2.32.3
