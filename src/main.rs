@@ -39,9 +39,9 @@ async fn main() {
     println!("Total FIWARE developers: {}", all_contributors.len());
 
     // Simple Axum web server (optional)
-    // let app = Router::new().route("/", get(|| async { "GitHub Stats Collector Running 🚀" }));
-    // let listener = tokio::net::TcpListener::bind("0.0.0.0:8080").await.unwrap();
-    // axum::serve(listener, app).await.unwrap();
+    let app = Router::new().route("/", get(|| async { "GitHub Stats Collector Running 🚀" }));
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:8080").await.unwrap();
+    axum::serve(listener, app).await.unwrap();
 }
 
 async fn get_statistics(client: &Client, repo: &str) -> (HashSet<String>, HashSet<String>) {

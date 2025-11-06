@@ -38,7 +38,7 @@ This project parallelizes API calls across repositories and forks using **Tokio*
 ## 🧰 Installation & Setup
 
 ### 1. Prerequisites
-- Rust (v1.70+)
+- Rust (v1.87.0+)
 - A GitHub Personal Access Token (with `read:public_repo` permissions)
 - `cargo` build tool
 
@@ -98,13 +98,13 @@ cargo run
 ## 📊 Example Output
 
 ```bash
-Fetching stats for FIWARE/context.Orion-LD...
-[FIWARE/context.Orion-LD] Stargazers: 20, Developers: 10, Total Users: 45
-Fetching stats for FIWARE/tutorials.Step-by-Step...
-[FIWARE/tutorials.Step-by-Step] Stargazers: 35, Developers: 15, Total Users: 60
+Fetching stats for telefonicaid/fiware-orion...
+[telefonicaid/fiware-orion] Stargazers: 216, Developers: 107, Total Users: 480
+Fetching stats for eProsima/Fast-DDS...
+[eProsima/Fast-DDS] Stargazers: 2610, Developers: 178, Total Users: 3272
 
-Total FIWARE users: 90
-Total FIWARE developers: 22
+Total FIWARE users: 10389
+Total FIWARE developers: 751
 ```
 
 ## 🌐 Web Endpoint
@@ -124,7 +124,8 @@ github-stats-collector/
 ├── Cargo.toml
 ├── src/
 │   └── main.rs
-├── repos.json
+├── data/
+│   └── repos.json
 ├── .env
 ├── README.md
 └── ROADMAP.md
